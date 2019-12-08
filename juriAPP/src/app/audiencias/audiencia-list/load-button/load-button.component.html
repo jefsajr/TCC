@@ -1,0 +1,7 @@
+<div class="text-center" *ngIf="hasMore; else msgEmpty ">
+   
+    <button class="btn btn-primary">Carregar mais registros</button>
+</div>
+<ng-template #msgEmpty>
+    <p class="text-center text-muted">Sem registros a serem carregados!</p>
+</ng-template>

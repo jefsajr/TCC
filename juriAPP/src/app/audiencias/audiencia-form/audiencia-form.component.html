@@ -1,0 +1,29 @@
+<app-user-area></app-user-area> 
+<div class="audienciaArea">
+    <div class="pergunta">
+        <h1>Quem matou Kennedy? {{perguntaDescricao}}</h1>
+    </div>
+    <div class="respostasDiv">
+        <form class="respostaForm" [formGroup]="respostaForm" (submit)="sendResposta()" novalidate>
+            <label class="element-animation btn btn-lg btn-primary btn-block"  *ngFor="let resposta of pergunta.respostas">
+                <input formControlName="idResposta" type="radio" value="{{resposta.id}}">{{resposta.descricao}}
+            </label>
+            
+            <button type="submit" class="btn btn-success">Enviar</button>
+        </form>
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Detalhes do caso</h5>                
+            </div>
+            <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">A morte occorreu com uma arma branca</li>
+                <li class="list-group-item">Tem sangue nos móveis</li>
+                <li class="list-group-item">Os vizinhos ouviram brigas</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+

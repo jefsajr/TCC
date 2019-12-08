@@ -1,0 +1,23 @@
+<app-user-area></app-user-area> 
+<div class="container" lasso="teste">
+    <h2>Placar dos Líderes</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Posição</th>
+                <th>Nome</th>
+                <th>Pontuação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngIf="placar.length == 0">
+                <td colspan="3"><i class="fas fa-exclamation-circle" style="color: red"></i> Nenhum resistro encontrado </td>
+            </tr>
+            <tr *ngFor="let plac of placar; let i = index;">
+                <td>{{i + 1}}º</td>
+                <td>{{plac.nome}}</td>
+                <td>{{plac.pontos}}</td>            
+            </tr>
+        </tbody>
+    </table>
+</div>
